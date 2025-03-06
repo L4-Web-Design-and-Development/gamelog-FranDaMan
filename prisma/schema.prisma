@@ -19,8 +19,8 @@ model Game {
   releaseDate DateTime
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-  categoryId  String
-  category    Category @relation(fields: [categoryId], references: [id])
+  categoryId  String?
+  category    Category? @relation(fields: [categoryId], references: [id])
 }
 
 model Category {
