@@ -137,6 +137,7 @@ async function seed() {
   }
 
   console.log("🎮 Categories created successfully");
+
   console.log("🔗 Linking each game to a category");
 
   // Fetch games from the database
