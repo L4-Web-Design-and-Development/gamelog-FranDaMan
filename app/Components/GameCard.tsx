@@ -1,22 +1,28 @@
+import WitcherImage from "~/assets/JPG/Witcher-Jpeg.jpg";
+
 export default function GameCard() {
   return (
     <div>
       Games
-      <div className="flex justify-center items-center w-80 h-60 bg-indigo-900 rounded-2xl">
-        image
+      <div className="flex justify-center items-center w-80  rounded-2xl">
+        <img
+          className="rounded-2xl h-52"
+          src={WitcherImage}
+          alt="Witcher-wild-hunt-logo"
+        />
       </div>
       <div>
-        <div className="flex justify-between">
-          <div>
-            <div>Witcher 3: Wild Hunt</div>
-            <div>RPG</div>
-            <div>2023-10-01</div>
+        <div className="flex justify-between items-center my-5">
+          <div className="h-24 flex flex-col justify-between">
+            <div className="font-bold">Witcher 3: Wild Hunt</div>
+            <div className="text-cyan-300 font-semibold">RPG</div>
+            <div className="text-zinc-500">2023-10-01</div>
           </div>
-          <div className="flex flex-col justify-between items-Center m-2">
-            <div className="border-2 border-cyan-300 text-cyan-300 px-6 rounded-md py-1">
+          <div className="flex flex-col justify-between gap-10">
+            <div className="flex justify-center items-center border-2 border-cyan-300 text-cyan-300 w-24 rounded-md h-7 text-sm">
               Edit
             </div>
-            <div className="border-2 border-red-300 text-red-300 px-6 rounded-md py-1">
+            <div className="flex justify-center items-center border-2 border-red-300 text-red-300 w-24 rounded-md h-7 text-sm">
               Delete
             </div>
           </div>
