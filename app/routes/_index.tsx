@@ -35,14 +35,15 @@ export default function Index() {
 
   console.log({ games });
   return (
-    <div>
-      <div className="grid grid-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <br />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
         {games.map((game) => (
           <GameCard
             key={game.id}
             title={game.title}
             releaseDate={game.releaseDate}
-            categoryTitle={game.category.title || "No Category"}
+            categoryTitle={game.category?.title || "No Category"}
           />
         ))}
       </div>

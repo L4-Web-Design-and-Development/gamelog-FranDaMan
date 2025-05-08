@@ -5,19 +5,23 @@ const prisma = new PrismaClient();
 async function seed() {
   const games = [
     {
-      title: "The Legend of Zelda: Breath of the Wild",
-      description: "An open-world adventure game set in the kingdom of Hyrule.",
-      price: 59.99,
-      rating: 4.9,
-      releaseDate: new Date("2017-03-03"),
+      title: "R.E.P.O",
+      description:
+        "A post-apocalyptic world filled with horrors beyond comprehension",
+      price: 8.5,
+      rating: 5,
+      releaseDate: new Date("2025-02-06"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701229/REPO-jpeg_stfgxh.jpg",
     },
     {
-      title: "The Witcher 3: Wild Hunt",
-      description:
-        "An action RPG set in a fantasy world full of monsters and magic.",
-      price: 39.99,
+      title: "Monster Hunter Wilds",
+      description: "An action RPG based around hunting mythical beings.",
+      price: 69.99,
       rating: 4.8,
       releaseDate: new Date("2015-05-19"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701341/Monsterhunter-Jpeg_xffcbk.jpg",
     },
     {
       title: "Red Dead Redemption 2",
@@ -25,6 +29,8 @@ async function seed() {
       price: 59.99,
       rating: 4.7,
       releaseDate: new Date("2018-10-26"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701113/RedDeadRedemtion-Jpeg_trsnft.jpg",
     },
     {
       title: "God of War",
@@ -32,6 +38,8 @@ async function seed() {
       price: 49.99,
       rating: 4.9,
       releaseDate: new Date("2018-04-20"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701113/RedDeadRedemtion-Jpeg_trsnft.jpg",
     },
     {
       title: "Minecraft",
@@ -40,6 +48,8 @@ async function seed() {
       price: 26.95,
       rating: 4.8,
       releaseDate: new Date("2011-11-18"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701119/Minecraft-Jpeg_zpm775.jpg",
     },
     {
       title: "Fortnite",
@@ -48,6 +58,8 @@ async function seed() {
       price: 0.0,
       rating: 4.5,
       releaseDate: new Date("2017-07-25"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701090/Fortnite-Jpeg_ncvb3y.jpg",
     },
     {
       title: "Cyberpunk 2077",
@@ -55,6 +67,8 @@ async function seed() {
       price: 59.99,
       rating: 4.0,
       releaseDate: new Date("2020-12-10"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701086/Cyberpunk-Jpeg_ev2hp7.jpg",
     },
     {
       title: "Among Us",
@@ -63,6 +77,8 @@ async function seed() {
       price: 4.99,
       rating: 4.4,
       releaseDate: new Date("2018-06-15"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701831/Amoungus-jpeg_yljzsp.jpg",
     },
     {
       title: "Animal Crossing: New Horizons",
@@ -71,6 +87,8 @@ async function seed() {
       price: 59.99,
       rating: 4.9,
       releaseDate: new Date("2020-03-20"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701182/AnimalcrossingJpeg_ylq2ac.jpg",
     },
     {
       title: "Hades",
@@ -79,6 +97,8 @@ async function seed() {
       price: 24.99,
       rating: 4.9,
       releaseDate: new Date("2020-09-17"),
+      imageURL:
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701094/Hades-Jpeg_dadvuu.jpg",
     },
   ];
 
