@@ -26,12 +26,12 @@ export default function Index() {
   return (
     <div>
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-4xl font-bold">Hello, World!</h1>
-        <GameCard />
         {games.map((game) => (
-          <div key={game.id}>
-            <h2>{game.title}</h2>
-          </div>
+          <GameCard
+            key={game.id}
+            title={game.title}
+            releaseDate={game.releaseDate}
+          />
         ))}
       </div>
     </div>
