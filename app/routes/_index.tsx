@@ -4,6 +4,7 @@ import { useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 import GameCard from "~/Components/GameCard";
 import gamelogFallback from "~/assets/svg/gamecard-fallback-image.DBpc2Wj6_Z2iLmXA.svg"; // You will need to add your own image here
+import Hero from "~/Components/HeroImage";
 
 export const meta: MetaFunction = () => {
   return [{ title: "GameLog" }, { name: "description", content: "Games" }];
@@ -35,6 +36,7 @@ export default function Index() {
   console.log({ games });
   return (
     <>
+      <Hero title={"GAMELOG"} ctaText={"Add Game"} />
       <div className="flex mx-12 text-3xl font-bold">Games</div>
       <div className="flex flex-col items-center justify-center min-h-screen">
         <br />
