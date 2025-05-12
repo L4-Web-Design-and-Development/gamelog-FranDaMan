@@ -12,7 +12,7 @@ export default function GameCard({
 }: GameCardProps) {
   const formattedDate = releaseDate.slice(0, 10);
   return (
-    <div className="m-3">
+    <div className="mx-3 mb-3">
       <div className="flex justify-center items-center w-96  rounded-2xl">
         <img
           className="rounded-2xl h-56"

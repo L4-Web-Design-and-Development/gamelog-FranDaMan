@@ -3,6 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 import GameCard from "~/Components/GameCard";
+import Hero from "~/Components/HeroSection";
 import gamelogFallback from "~/assets/svg/gamecard-fallback-image.DBpc2Wj6_Z2iLmXA.svg"; // You will need to add your own image here
 
 export const meta: MetaFunction = () => {
@@ -37,19 +38,23 @@ export default function Index() {
 
   console.log({ games });
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <br />
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-        {games.map((game) => (
-          <GameCard
-            key={game.id}
-            title={game.title}
-            releaseDate={game.releaseDate}
-            imageURL={game.imageURL || gamelogFallback}
-            categoryTitle={game.category?.title || "No Category"}
-          />
-        ))}
+    <>
+      <Hero title={""} />
+      <div className="flex mx-12 text-3xl font-bold">Games</div>
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <br />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+          {games.map((game) => (
+            <GameCard
+              key={game.id}
+              title={game.title}
+              releaseDate={game.releaseDate}
+              imageURL={game.imageURL || gamelogFallback}
+              categoryTitle={game.category?.title || "No Category"}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

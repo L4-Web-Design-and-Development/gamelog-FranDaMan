@@ -19,7 +19,7 @@ async function seed() {
       description: "An action RPG based around hunting mythical beings.",
       price: 69.99,
       rating: 4.8,
-      releaseDate: new Date("2015-05-19"),
+      releaseDate: new Date("2025-02-28"),
       imageURL:
         "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701341/Monsterhunter-Jpeg_xffcbk.jpg",
     },
