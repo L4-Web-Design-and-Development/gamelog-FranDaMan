@@ -1,28 +1,31 @@
-import WitcherImage from "~/assets/JPG/Witcher-Jpeg.jpg";
 interface GameCardProps {
   title: string;
   releaseDate: string;
   categoryTitle: string;
+  imageURL: string;
 }
-export default function GameCard(props: GameCardProps) {
-  const formattedDate = props.releaseDate.slice(0, 10);
+export default function GameCard({
+  title,
+  releaseDate,
+  categoryTitle,
+  imageURL,
+}: GameCardProps) {
+  const formattedDate = releaseDate.slice(0, 10);
   return (
-    <div>
+    <div className=" p-3">
       <div className="flex justify-center items-center w-80  rounded-2xl">
         <img
-          className="rounded-2xl h-52"
-          src={WitcherImage}
-          alt="Witcher-wild-hunt-logo"
+          className="rounded-2xl h-48"
+          src={imageURL}
+          alt={`${title} cover`}
         />
       </div>
       <div>
         <div className="flex justify-between items-center my-5">
           <div className="h-24 flex flex-col justify-between">
-            <div className="flex items-center font-bold w-48 h-7">
-              {props.title}
-            </div>
+            <div className="flex items-center font-bold w-48 h-7">{title}</div>
             <div className="text-cyan-300 font-semibold items-center">
-              {props.categoryTitle}
+              {categoryTitle}
             </div>
             <div className="text-zinc-500 items-center">{formattedDate}</div>
           </div>

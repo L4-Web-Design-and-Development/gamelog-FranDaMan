@@ -3,6 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 import GameCard from "~/Components/GameCard";
+import gamelogFallback from "~/assets/svg/gamecard-fallback-image.DBpc2Wj6_Z2iLmXA.svg"; // You will need to add your own image here
 
 export const meta: MetaFunction = () => {
   return [
@@ -19,6 +20,7 @@ export async function loader() {
       id: true,
       title: true,
       releaseDate: true,
+      imageURL: true,
       category: {
         select: {
           title: true,
@@ -43,6 +45,7 @@ export default function Index() {
             key={game.id}
             title={game.title}
             releaseDate={game.releaseDate}
+            imageURL={game.imageURL || gamelogFallback}
             categoryTitle={game.category?.title || "No Category"}
           />
         ))}

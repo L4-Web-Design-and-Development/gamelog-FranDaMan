@@ -39,7 +39,7 @@ async function seed() {
       rating: 4.9,
       releaseDate: new Date("2018-04-20"),
       imageURL:
-        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701113/RedDeadRedemtion-Jpeg_trsnft.jpg",
+        "https://res.cloudinary.com/dvtokhv9d/image/upload/v1746701103/GodOfWar-Jpeg_d7tsdz.jpg",
     },
     {
       title: "Minecraft",
