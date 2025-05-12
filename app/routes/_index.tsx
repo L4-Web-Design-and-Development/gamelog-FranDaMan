@@ -3,14 +3,10 @@ import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 import GameCard from "~/Components/GameCard";
-import Hero from "~/Components/HeroSection";
 import gamelogFallback from "~/assets/svg/gamecard-fallback-image.DBpc2Wj6_Z2iLmXA.svg"; // You will need to add your own image here
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
+  return [{ title: "GameLog" }, { name: "description", content: "Games" }];
 };
 
 export async function loader() {
@@ -39,13 +35,13 @@ export default function Index() {
   console.log({ games });
   return (
     <>
-      <Hero title={""} />
       <div className="flex mx-12 text-3xl font-bold">Games</div>
       <div className="flex flex-col items-center justify-center min-h-screen">
         <br />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           {games.map((game) => (
             <GameCard
+              gameId={game.id}
               key={game.id}
               title={game.title}
               releaseDate={game.releaseDate}

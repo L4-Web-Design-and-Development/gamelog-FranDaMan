@@ -1,8 +1,10 @@
 interface GameCardProps {
+  gameId: string;
   title: string;
   releaseDate: string;
   categoryTitle: string;
   imageURL: string;
+  onDelete?: () => void;
 }
 export default function GameCard({
   title,
@@ -37,9 +39,15 @@ export default function GameCard({
             <div className="flex justify-center items-center border-2 border-cyan-300 text-cyan-300 w-28 rounded-md h-8 text-base">
               Edit
             </div>
-            <div className="flex justify-center items-center border-2 border-red-300 text-red-300 w-28 rounded-md h-8 text-base">
+            <button
+              onClick={() => {
+                // Optional: trigger a callback or state update to remove the component
+                console.log("Delete clicked");
+              }}
+              className="flex justify-center items-center border-2 border-red-300 text-red-300 w-28 rounded-md h-8 text-base hover:bg-red-300 hover:text-white transition"
+            >
               Delete
-            </div>
+            </button>
           </div>
         </div>
       </div>
