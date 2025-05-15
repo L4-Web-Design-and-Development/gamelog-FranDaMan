@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import siteLogo from "~/assets/svg/gamelog-logo.svg"; // Adjust path as needed
+import siteLogo from "~/assets/svg/gamelog-logo.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -11,16 +11,33 @@ const Footer: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex gap-16 text-lg">
-          <Link to="/games" className="hover:text-cyan-300 transition">
-            Games
-          </Link>
-          <Link to="/about" className="hover:text-cyan-300 transition">
-            About
-          </Link>
-          <Link to="/blog" className="hover:text-cyan-300 transition">
-            Blog
-          </Link>
+        <div className="flex gap-44 text-lg pr-40">
+          <div className="text-slate-200">
+            Site
+            <div className="text-gray-500">
+              <div>Games</div>
+              <div>About</div>
+              <div>Blog</div>
+            </div>
+          </div>
+
+          <div>
+            Support
+            <div className="text-gray-500">
+              <div>Legal</div>
+              <div>Contact Us</div>
+              <div>Privacy Policy</div>
+            </div>
+          </div>
+
+          <div>
+            Follow Us
+            <div className="text-gray-500">
+              <div>Facebook</div>
+              <div>Twitter</div>
+              <div>Instagram</div>
+            </div>
+          </div>
         </div>
       </nav>
     </footer>

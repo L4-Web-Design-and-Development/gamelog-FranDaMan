@@ -35,7 +35,7 @@ export default function Index() {
 
   console.log({ games });
   return (
-    <>
+    <main className="container mx-auto px-4">
       <Hero
         title={
           <>
@@ -45,7 +45,7 @@ export default function Index() {
         }
         ctaText={"Add Game"}
       />
-      <div className="flex mx-16 text-3xl font-bold">Games</div>
+      <div className="flex mx-16 text-5xl lg:text-3xl font-bold">Games</div>
       <div className="flex flex-col items-center justify-center min-h-screen">
         <br />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
@@ -61,6 +61,6 @@ export default function Index() {
           ))}
         </div>
       </div>
-    </>
+    </main>
   );
 }

@@ -10,20 +10,20 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ title, ctaText, onCtaClick }) => {
   return (
-    <section
-      className="my-2 relative w-full after:h-screen bg-center bg-contain bg-no-repeat flex items-center  "
-      style={{
-        backgroundImage: `url(${HeroImage})`,
-      }}
-    >
-      <div className=" mx-40 flex items-start flex-col justify-between gap-10">
-        <h1 className=" text-9xl  w-3/5 font-semibold text-stone-300">
+    <section className="my-2 p-8 relative w-full after:h-screen bg-center bg-contain bg-no-repeat flex items-center overflow-hidden ">
+      <img
+        src={HeroImage}
+        alt="Welcome to GameLog"
+        className="absolute w-full h-full inset-0 object-contain"
+      />
+      <div className="relative top-8 md:top-8 flex items-start flex-col justify-between gap-4">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl w-[250px] lg:w-[500px] xl:text-8xl xl:w-[650px] 2xl:text-9xl 2xl:w-[800px] md:w-72 font-semibold text-slate-200">
           {title}
         </h1>
         {ctaText && (
           <button
             onClick={onCtaClick}
-            className="mt-10 px-72 py-4 border-2 border-cyan-300 text-cyan-300 rounded-xl hover:bg-cyan-300 transition"
+            className="w-[780px] mt-10 flex justify-center items-center py-4 px-8 border-2 border-cyan-300 text-cyan-300 rounded-xl hover:bg-cyan-300/10 transition md:w-400px lg:w-[300px"
           >
             {ctaText}
           </button>
