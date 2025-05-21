@@ -15,7 +15,7 @@ export default function GameCard({
   const formattedDate = releaseDate.slice(0, 10);
   return (
     <div className="px-4 pb-4 ">
-      <div className="relative flex justify-center h-64 items-center w-auto rounded-2xl overflow-hidden 2xl:h-44">
+      <div className="relative flex justify-center h-48 items-center w-auto rounded-2xl overflow-hidden  2xl:h-44">
         <img
           className="absolute h-full w-full inset-0 object-cover"
           src={imageURL}

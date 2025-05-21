@@ -5,13 +5,13 @@ const Header: React.FC = () => {
   return (
     <header className="bg-gray-950 text-gray-50">
       <nav className="flex items-center justify-between py-8 px-20">
-        <div>
+        <div className="h-16 w-16">
           <Link to="/">
             <img src={siteLogo} alt="game-logo" />
           </Link>
         </div>
 
-        <div className="flex gap-16 text-lg">
+        <div className="flex gap-16 text-base">
           <Link to="/games" className="hover:text-cyan-300 transition">
             Games
           </Link>

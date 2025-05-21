@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({ title, ctaText, onCtaClick }) => {
         className="absolute w-full h-full inset-0 object-contain"
       />
       <div className="relative top-8 md:top-8 flex items-start flex-col justify-between gap-4">
-        <h1 className="text-4xl md:text-5xl lg:text-7xl w-[250px] lg:w-[500px] xl:text-8xl xl:w-[650px] 2xl:text-9xl 2xl:w-[800px] md:w-72 font-semibold text-slate-200">
+        <h1 className="text-4xl xsm:text:3xl   sm:text-3xl sm:w-[150px] md:text-5xl lg:text-7xl w-[250px] lg:w-[500px] xl:text-8xl xl:w-[650px] 2xl:text-9xl 2xl:w-[800px] md:w-72 font-semibold text-slate-200">
           {title}
         </h1>
         {ctaText && (
