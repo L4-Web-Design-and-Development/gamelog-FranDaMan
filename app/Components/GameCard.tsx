@@ -25,13 +25,13 @@ export default function GameCard({
       <div>
         <div className="flex justify-between items-center lg:my-7">
           <div className="h-28 flex flex-col justify-between">
-            <div className="flex items-center font-semibold w-56 lg:w-40 h-7 text-xl">
+            <div className="flex items-start font-semibold w-44 lg:w-36 h-7 text-base">
               {title}
             </div>
-            <div className="text-cyan-300 font-semibold items-center text-lg">
+            <div className="text-cyan-300 font-semibold items-center text-base">
               {categoryTitle}
             </div>
-            <div className="text-zinc-500 items-center text-lg">
+            <div className="text-zinc-500 items-center text-sm">
               {formattedDate}
             </div>
           </div>

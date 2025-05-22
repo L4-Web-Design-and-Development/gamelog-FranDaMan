@@ -1,17 +1,24 @@
 import { Link } from "@remix-run/react";
 import siteLogo from "~/assets/svg/gamelog-logo.svg";
-
+import facebook from "~/assets/svg/facebook.svg";
+import twitter from "~/assets/svg/twitter.svg";
+import instagram from "~/assets/svg/Vector.svg";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-950 text-gray-50">
       <nav className="flex items-center justify-between py-8 px-20">
-        <div>
+        <div className="h-20 w-20">
           <Link to="/">
             <img src={siteLogo} alt="game-logo" />
           </Link>
+          <div className="flex flex-row gap-9 bottom-3">
+            <img src={facebook} alt="facebooklogo" />
+            <img src={twitter} alt="twitterlogo" />
+            <img src={instagram} alt="instagram" />
+          </div>
         </div>
 
-        <div className="flex gap-44 text-lg pr-40">
+        <div className="flex gap-20 text-lg pr-20">
           <div className="text-slate-200">
             Site
             <div className="text-gray-500">
