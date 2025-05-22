@@ -45,12 +45,12 @@ export default function Index() {
         }
         ctaText={"Add Game"}
       />
-      <div className="flex mx-[20px] text-5xl lg:text-3xl font-bold ">
+      <div className="container mx-auto px-4 flex text-2xl lg:text-3xl font-bold ">
         Games
       </div>
-      <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="flex flex-col items-center justify-center">
         <br />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {games.map((game) => (
             <GameCard
               gameId={game.id}
