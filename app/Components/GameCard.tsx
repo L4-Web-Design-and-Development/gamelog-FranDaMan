@@ -23,20 +23,20 @@ export default function GameCard({
         />
       </div>
       <div>
-        <div className="flex justify-between items-center mt-4">
+        <div className=" relative flex justify-between items-center mx-auto mt-4">
           <div className="h-28 flex flex-col justify-between">
-            <div className="flex items-start font-semibold w-44 lg:w-36 h-7 text-base">
+            <div className="flex items-start font-bold w-44 md:w-10 lg:w-30 h-7 text-base">
               {title}
             </div>
-            <div className="text-cyan-300 font-semibold items-center text-base">
+            <div className="text-cyan-300 font-semibold items-center text-sm">
               {categoryTitle}
             </div>
-            <div className="text-zinc-500 items-center text-sm">
+            <div className="text-zinc-500 items-center text-base">
               {formattedDate}
             </div>
           </div>
-          <div className="flex flex-col justify-between gap-10">
-            <div className="flex justify-center items-center border-2 border-cyan-300 text-cyan-300 w-28 rounded-md h-8 text-base">
+          <div className="flex flex-col justify-between items-center gap-10">
+            <div className="flex justify-center items-center border-2 border-cyan-300 text-cyan-300 w-28 rounded-md h-8  text-base">
               Edit
             </div>
             <button

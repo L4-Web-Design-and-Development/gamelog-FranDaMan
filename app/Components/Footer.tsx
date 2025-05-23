@@ -6,8 +6,8 @@ import instagram from "~/assets/svg/Vector.svg";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-950 text-gray-50">
-      <nav className="container flex-col mx-auto flex items-center  lg:flex-row justify-center lg:items-center lg:justify-between py-8 px-10">
-        <div className=" flex flex-col gap-10 justify-start items-center">
+      <nav className="container flex-col mx-auto flex items-start  lg:flex-row justify-center lg:items-center lg:justify-between py-8 px-10">
+        <div className=" container flex flex-col gap-5 justify-start lg:items-start items-center">
           <Link to="/">
             <img src={siteLogo} className="h-20 w-20 " alt="game-logo" />
           </Link>

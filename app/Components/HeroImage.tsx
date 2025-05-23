@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImage from "~/assets/PNG/Hero-image.png";
+import { Link } from "@remix-run/react";
 
 interface HeroProps {
   title: React.ReactNode;
@@ -21,12 +22,14 @@ const Hero: React.FC<HeroProps> = ({ title, ctaText, onCtaClick }) => {
           {title}
         </h1>
         {ctaText && (
-          <button
-            onClick={onCtaClick}
-            className="w-full py-2 mt-10 flex justify-center items-center lg:py-4 lg:px-8 border-2 border-cyan-300 text-cyan-300 rounded-xl hover:bg-cyan-300/10 transition md:w-[600px] lg:w-[620px]"
-          >
-            {ctaText}
-          </button>
+          <Link to="/add-game">
+            <button
+              onClick={onCtaClick}
+              className="w-full py-2 mt-10 flex justify-center items-center lg:py-4 lg:px-8 border-2 border-cyan-300 text-cyan-300 rounded-xl hover:bg-cyan-300/10 transition md:w-[600px] lg:w-[620px]"
+            >
+              {ctaText}
+            </button>
+          </Link>
         )}
       </div>
     </section>
