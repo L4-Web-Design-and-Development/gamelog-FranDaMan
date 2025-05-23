@@ -1,9 +1,16 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {},
+      animation: {
+        marquee: "marquee 8s linear infinite",
+      },
+    },
   },
   plugins: [],
-} satisfies Config;
+};
+
+export default config;
