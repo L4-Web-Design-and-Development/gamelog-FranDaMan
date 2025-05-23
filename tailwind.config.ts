@@ -11,10 +11,6 @@ const config: Config = {
     },
   },
   plugins: [],
-
-  animation: {
-    marquee: "marquee 20s linear infinite", // was 8s → now 15s
-  },
 };
 
 export default config;
