@@ -23,9 +23,9 @@ export default function GameCard({
         />
       </div>
       <div>
-        <div className=" relative flex justify-between items-center mx-auto mt-4">
-          <div className="h-28 flex flex-col justify-between">
-            <div className="flex items-start font-bold w-44 md:w-10 lg:w-30 h-7 text-base">
+        <div className="  relative flex justify-between items-center mx-auto mt-4">
+          <div className="h-28 flex flex-col justify-between overflow-hidden">
+            <div className="truncate whitespace-nowrap w-44 md:w-20 lg:w-20 xl:w-40 flex items-start font-bold text-base">
               {title}
             </div>
             <div className="text-cyan-300 font-semibold items-center text-sm">
