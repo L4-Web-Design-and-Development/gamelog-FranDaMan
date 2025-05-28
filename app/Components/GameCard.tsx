@@ -1,4 +1,6 @@
+import { Form, Link } from "@remix-run/react";
 interface GameCardProps {
+  id: string;
   gameId: string;
   title: string;
   releaseDate: string;
@@ -7,6 +9,7 @@ interface GameCardProps {
   onDelete?: () => void;
 }
 export default function GameCard({
+  id,
   title,
   releaseDate,
   categoryTitle,
@@ -16,13 +19,18 @@ export default function GameCard({
 
   return (
     <div className="px-4 pb-4 ">
-      <div className="relative flex justify-center h-72 items-center w-auto rounded-2xl overflow-hidden lg:h-52">
+      <Link
+        to={`/edit-game/${id}`}
+        className="relative flex justify-center h-72 items-center w-auto rounded-2xl overflow-hidden lg:h-52"
+      >
+        {" "}
         <img
           className="absolute h-full w-full inset-0 object-cover"
           src={imageURL}
           alt={`${title} cover`}
         />
-      </div>
+      </Link>
+
       <div>
         <div className="  relative flex justify-between items-center mx-auto mt-4">
           <div className="h-28 flex flex-col justify-between">
@@ -43,18 +51,19 @@ export default function GameCard({
             </div>
           </div>
           <div className="flex flex-col justify-between items-center gap-10">
-            <div className="flex justify-center items-center border-2 border-cyan-300 text-cyan-300 w-28 rounded-md h-8  text-base">
-              Edit
-            </div>
-            <button
-              onClick={() => {
-                // Optional: trigger a callback or state update to remove the component
-                console.log("Delete clicked");
-              }}
-              className="flex justify-center items-center border-2 border-red-300 text-red-300 w-28 rounded-md h-8 text-base hover:bg-red-300 hover:text-white transition"
-            >
-              Delete
-            </button>
+            <Link to={`/edit-game/${id}`}>
+              <button className="flex justify-center w-32 h-12 items-center border-2 border-cyan-300 text-cyan-300 lg:w-28 rounded-md lg:h-8  text-base hover:bg-cyan-300/30 transition">
+                Edit
+              </button>
+            </Link>
+            <Form action={`/delete-game/${id}`} method="post">
+              <button
+                type="submit"
+                className="flex justify-center w-32 h-12 items-center border-2 border-red-300 text-red-300 lg:w-28 rounded-md lg:h-8 text-base hover:bg-red-300/30 transition"
+              >
+                Delete
+              </button>
+            </Form>
           </div>
         </div>
       </div>

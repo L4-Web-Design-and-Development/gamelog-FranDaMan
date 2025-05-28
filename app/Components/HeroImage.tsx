@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ title, ctaText, onCtaClick }) => {
           <Link to="/add-game">
             <button
               onClick={onCtaClick}
-              className="w-full py-3 px-40 mt-10 flex justify-center items-center lg:py-4 lg:px-8 border-2 border-cyan-300 text-cyan-300 rounded-xl hover:bg-cyan-300/10 transition md:w-[600px] lg:w-[620px]"
+              className="w-full py-3 px-40 mt-10 flex justify-center items-center lg:py-4 lg:px-8 border-2 border-cyan-300 text-cyan-300 rounded-xl hover:bg-cyan-300/30 transition md:w-[600px] lg:w-[620px]"
             >
               {ctaText}
             </button>

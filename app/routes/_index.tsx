@@ -53,6 +53,7 @@ export default function Index() {
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {games.map((game) => (
             <GameCard
+              id={game.id}
               gameId={game.id}
               key={game.id}
               title={game.title}
