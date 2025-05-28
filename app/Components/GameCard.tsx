@@ -13,6 +13,7 @@ export default function GameCard({
   imageURL,
 }: GameCardProps) {
   const formattedDate = releaseDate.slice(0, 10);
+
   return (
     <div className="px-4 pb-4 ">
       <div className="relative flex justify-center h-72 items-center w-auto rounded-2xl overflow-hidden lg:h-52">
@@ -24,10 +25,16 @@ export default function GameCard({
       </div>
       <div>
         <div className="  relative flex justify-between items-center mx-auto mt-4">
-          <div className="h-28 flex flex-col justify-between overflow-hidden">
-            <div className="truncate whitespace-nowrap w-44 md:w-20 lg:w-20 xl:w-40 flex items-start font-bold text-base">
-              {title}
+          <div className="h-28 flex flex-col justify-between">
+            <div className="flex">
+              <div
+                title={title}
+                className="whitespace-nowrap overflow-hidden text-ellipsis md:truncate w-full md:w-40 lg:w-20 xl:w-40 font-bold text-base cursor-default select-none"
+              >
+                {title}
+              </div>
             </div>
+
             <div className="text-cyan-300 font-semibold items-center text-sm">
               {categoryTitle}
             </div>
