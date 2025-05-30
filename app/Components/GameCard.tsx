@@ -37,7 +37,7 @@ export default function GameCard({
             <div className="flex">
               <div
                 title={title}
-                className="whitespace-nowrap overflow-hidden text-ellipsis md:truncate w-full md:w-40 lg:w-28 xl:w-40 2xl:w-52  font-bold text-base cursor-default select-none"
+                className="whitespace-nowrap overflow-hidden text-ellipsis md:truncate w-full md:w-52 lg:w-28 xl:w-40 2xl:w-52  font-bold text-base cursor-default select-none"
               >
                 {title}
               </div>
@@ -50,7 +50,7 @@ export default function GameCard({
               {formattedDate}
             </div>
           </div>
-          <div className="flex flex-col justify-between items-center md:gap-14 lg:gap-7 gap-7">
+          <div className="flex flex-col justify-between items-center md:gap-14 lg:gap-7 gap-9">
             <Link to={`/edit-game/${id}`}>
               <button className="flex justify-center w-32 h-8 items-center border-2 border-cyan-300 text-cyan-300 lg:w-24 rounded-sm lg:h-6 lg:text-xs text-base md:w-28 hover:bg-cyan-300/30 transition">
                 Edit
